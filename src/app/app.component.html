@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="newsletter">
+        <section class="name">
+            <p>ANUNCIO PERDIDO</p>
+        </section>
+
+        <section class="info">
+            <p>LO ULTIMO...!!!!!</p>
+            <p>35¢</p>
+        </section>
+
+        <section class="title">
+            <h1>
+                <app-add-task (taskAdded)="addTask($event)"></app-add-task>
+            </h1>
+        </section>
+
+        <section class="content">
+            <article class="left-side">
+                <h2>
+                    <span>FILTROS DE TAREAS:</span>
+                </h2>
+                <div class="app-container">
+
+                    <div class="filter-container">
+                        <app-task-filter (filterChanged)="applyFilter($event)"></app-task-filter>
+                    </div>
+                    <app-task-list [tasks]="tasks | filterTasks:selectedFilter"></app-task-list>
+                </div>
+
+            </article>
+            <article class="right-side">
+                <img src="https://i.ibb.co/R6vng5P/family-simpson.jpg" alt="Simpsons family photo">
+                <p>Homer Jay Simpson (Homero Jay Simpson en Hispanoamérica): </p>
+                <p>Es el padre de la familia Simpson y protagonista; tiene 39 años, es obeso, calvo y con poco sentido
+                    común.</p>
+            </article>
+        </section>
+    </div>
+</div>

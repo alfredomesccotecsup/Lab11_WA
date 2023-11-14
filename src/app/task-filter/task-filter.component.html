@@ -1,0 +1,8 @@
+<div>
+  
+    
+    <input type="radio" name="filter" [(ngModel)]="selectedFilter" (change)="onFilterChange('all')" value="all"> Todas
+    <input type="radio" name="filter" [(ngModel)]="selectedFilter" (change)="onFilterChange('completed')" value="completed"> Completadas
+    <input type="radio" name="filter" [(ngModel)]="selectedFilter" (change)="onFilterChange('uncompleted')" value="uncompleted"> No Completadas
+  </div>
+  
